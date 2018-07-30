@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">easyLive</string>
+    <string name="TheImagesAboutImageByAItemFromNewsList">这是一个新闻列表中新闻信息所包含的图片</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_news_web">NewsWebActivity</string>
+    <string name="sign">签到</string>
+    <string name="icon">图标</string>
+    <string name="login">登陆</string>
+    <string name="register">注册</string>
+    <string name="scannerPassword">请输入密码</string>
+    <string name="scannerRegisterPassword">请输入密码不少于6位</string>
+    <string name="scannerSMS">请输入验证码</string>
+    <string name="scannerPhone">请输入手机号码</string>
+    <string name="title_activity_find_recipes">FindRecipesActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

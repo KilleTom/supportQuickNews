@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+                name="comicChapterUiModule"
+                type="com.ypz.supportquicknews.moduleFunction.humorousMoment.cartoon.showCmoicChapter.ComicChapterUiModule"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            tools:context="com.ypz.supportquicknews.moduleFunction.humorousMoment.cartoon.showCmoicChapter.ComicChapterActivity">
+
+        <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    app:contentScrim="?attr/colorPrimary"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <ImageView
+                        android:id="@+id/comic_ic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <android.support.v7.widget.Toolbar
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        app:layout_collapseMode="pin"
+                        app:popupTheme="@style/AppTheme.PopupOverlay"
+                        app:title="@{comicChapterUiModule.comicChapterToolbarTitle}"
+                        app:titleTextColor="@android:color/white"/>
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/comicchapterlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            <com.scwang.smartrefresh.layout.footer.BallPulseFooter
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

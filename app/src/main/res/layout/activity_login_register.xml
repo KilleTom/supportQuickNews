@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="uiModule"
+            type="com.ypz.supportquicknews.moduleFunction.loginOrRegister.LoginRegisterUIModule" />
+    </data>
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_activity_bg2"
+        android:onClick="@{uiModule::uiOnClick}"
+        tools:context="com.ypz.supportquicknews.moduleFunction.loginOrRegister.LoginRegisterActivity">
+        <ImageView
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="15dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp">
+            <LinearLayout
+                android:id="@+id/user_message_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="12dp"
+                    app:cardMaxElevation="0dp">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/login"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:checked="@={uiModule.singleCheckLoginRadio}"
+                            android:text="@string/login" />
+
+                        <RadioButton
+                            android:id="@+id/register"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/register" />
+                    </RadioGroup>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="1dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="20dp"
+                    app:cardMaxElevation="40dp">
+
+                    <EditText
+                        android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:drawableStart="@drawable/ic_persion"
+                        android:hint="@string/scannerPhone"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:text="@{uiModule.phoneText}" />
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="20dp"
+                    app:cardMaxElevation="40dp">
+
+                    <EditText
+                        android:id="@+id/userpwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:drawableStart="@drawable/ic_lock2"
+                        android:hint="@{uiModule.pwdHideText}"
+                        android:inputType="textPassword"
+                        android:maxLength="16"
+                        android:singleLine="true"
+                        android:text="@{uiModule.pwdText}"
+                        tools:hint="请输入密码" />
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="@{uiModule.smsVisisable}"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="20dp"
+                    app:cardMaxElevation="40dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/usersms"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@null"
+                            android:drawableStart="@drawable/ic_sms2"
+                            android:hint="@string/scannerSMS"
+                            android:singleLine="true"
+                            android:text="@{uiModule.smsText}" />
+
+                        <Button
+                            android:id="@+id/sendsms_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/sendsms_bg"
+                            android:enabled="@{uiModule.sendSmsenable}"
+                            android:onClick="@{uiModule::uiOnClick}"
+                            android:paddingBottom="2dp"
+                            android:paddingEnd="5dp"
+                            android:paddingStart="5dp"
+                            android:paddingTop="2dp"
+                            android:text="@{uiModule.sendSmsString}"
+                            android:textColor="@android:color/white"
+                            tools:text="倒计时：60秒" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="20dp"
+                    app:cardMaxElevation="0dp">
+                    <cn.ypz.com.killetomrxmateria.rxwidget.raisebutton.RxRaisedDropButton
+                        android:id="@+id/login_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/login_btn_bg"
+                        android:theme="@style/LoginDrop"
+                        android:enabled="@{uiModule.loginRegisterEnable}"
+                        android:onClick="@{uiModule::uiOnClick}"
+                        android:text="@{uiModule.btnTextString}"
+                        android:textColor="@android:color/black"
+                        tools:text="@android:string/kg_login_submit_button" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/cardView2"
+            android:layout_alignTop="@id/cardView2"
+            android:layout_alignStart="@id/cardView2"
+            android:layout_alignEnd="@id/cardView2"
+            app:cardElevation="100dp"
+            android:visibility="@{uiModule.loginLoadVisisable}"
+            app:cardBackgroundColor="#60000000">
+        <com.ldoublem.loadingviewlib.view.LVGhost
+            android:id="@+id/ghost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/cardView2"
+            android:layout_alignTop="@id/cardView2"
+            android:layout_alignStart="@id/cardView2"
+            android:layout_alignEnd="@id/cardView2"
+            app:cardElevation="100dp"
+            android:visibility="@{uiModule.registerLoadVisisable}"
+            app:cardBackgroundColor="#60000000">
+            <com.ldoublem.loadingviewlib.view.LVBlock
+                android:id="@+id/block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+    <!---->
+</layout>

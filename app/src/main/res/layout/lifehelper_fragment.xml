@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        app:cardElevation="25dp"
+        app:cardCornerRadius="18dp"
+        app:cardBackgroundColor="#F4F4E4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cooking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cookingtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:alpha="5"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="3dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="美味菜谱"
+                            android:textSize="15sp" />
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cookingsubherad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cookingtitle"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:alpha="5"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="精选美味菜谱"
+                            android:textSize="11sp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"/>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="20dp">
+
+                <ImageView
+                    android:id="@+id/cookingicon"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/cmoic_ic"
+                    android:scaleType="fitXY"/>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/powticket"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        app:cardElevation="35dp"
+        app:cardCornerRadius="18dp"
+        app:cardBackgroundColor="#F4F4E4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/powtictettitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:alpha="5"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="3dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:textSize="15sp"
+                        android:text="在线电影票" />
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/powtictetsubherad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/powtictettitle"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:alpha="5"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="精选在线购票"
+                        android:textSize="11sp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"/>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="20dp">
+
+                <ImageView
+                    android:id="@+id/powticteticon"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/cmoic_ic"
+                    android:scaleType="fitXY"/>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        app:cardElevation="25dp"
+        app:cardCornerRadius="18dp"
+        app:cardBackgroundColor="#F4F4E4" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="20dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/findertitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:alpha="5"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="3dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="美味菜谱"
+                            android:textSize="15sp" />
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/findersubherad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/findertitle"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:alpha="5"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="精选美味菜谱"
+                            android:textSize="11sp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"/>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="20dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/cmoic_ic"
+                    android:scaleType="centerInside"/>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

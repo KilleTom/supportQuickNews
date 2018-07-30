@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+                name="uiModule"
+                type="com.ypz.supportquicknews.moduleFunction.setting.SettingUIModule"/>
+        <import type="com.ypz.supportquicknews.base.ImageAdapter"/>
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@android:color/holo_blue_dark">
+
+            <Button
+                    android:id="@+id/sign"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/sign_rect_gray_bg"
+                    android:text="@string/sign"
+                    android:textColor="#DA4A13"
+                    android:textSize="14sp"
+                    android:onClick="@{uiModule::uiClick}"/>
+
+            <Button
+                    android:id="@+id/login"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/sign_rect_gray_bg"
+                    android:text="登陆/注册"
+                    android:textSize="18sp"
+                    android:onClick="@{uiModule::uiClick}"
+                    android:visibility="@{uiModule.viis}"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/useric"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:contentDescription="@string/icon"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:visibility="@{uiModule.icVis}"
+                    tools:visibility="visible"
+                    tools:src="@drawable/ic_launcher_background"
+                    android:elevation="500dp"
+                    imageUrl="@{uiModule.iconUrl}"
+            />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/setting_rv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        <Button
+                android:id="@+id/exit"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:visibility="@{uiModule.icVis}"
+                android:onClick="@{uiModule::uiClick}"
+                android:text="退出登录"
+                android:background="@color/whitesmoke"/>
+
+    </LinearLayout>
+</layout>

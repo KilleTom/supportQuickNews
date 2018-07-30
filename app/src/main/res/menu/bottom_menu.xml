@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/news"
+            android:icon="@drawable/ic_new"
+            android:title="新闻" />
+
+    <item
+            android:id="@+id/humorous"
+            android:icon="@drawable/ic_humorous"
+            android:title="娱乐" />
+
+    <item
+            android:id="@+id/life"
+            android:icon="@drawable/ic_life"
+            android:title="生活" />
+
+    <item
+            android:id="@+id/settings"
+            android:icon="@drawable/ic_settings"
+            android:title="设置" />
+</menu>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ypz.supportquicknews.test.MainActivity">
+
+   <!--<ImageView
+       android:id="@+id/iamges"
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       android:scaleType="fitXY"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:button="@null"
+            android:background="@drawable/comic_check_bg"
+            android:checked="true"
+            android:gravity="center"
+            android:text="danji"
+            android:textColor="@android:color/darker_gray" />
+    </RelativeLayout>
+
+</LinearLayout>

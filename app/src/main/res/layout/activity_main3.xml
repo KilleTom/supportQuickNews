@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/tb_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@android:color/holo_blue_light">
+        <ImageView
+            android:id="@+id/tb_black"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"/>
+        <TextView
+            android:id="@+id/tb_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            tools:text="微信精选"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black">
+
+        <com.romainpiel.titanic.library.TitanicTextView
+            android:id="@+id/load"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Start\n\nLoading\n\nWeb"
+            android:textColor="#222222"
+            android:textSize="60sp"
+            android:gravity="center"/>
+        <com.ypz.supportquicknews.base.view.MyWebView
+            android:id="@+id/web"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
